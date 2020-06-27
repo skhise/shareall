@@ -135,12 +135,12 @@ public class ConnectionFragment extends Fragment {
         getContext().getApplicationContext().unregisterReceiver(broadcastReceiver);
         Toast.makeText(getActivity(), "OnDestroy", Toast.LENGTH_SHORT).show();
     }
-
     void exqListener(){
+
            btnonOff.setOnClickListener(new View.OnClickListener() {
                @Override
                public void onClick(View view) {
-                   try{
+                   try {
 
                        if(wifiManager.isWifiEnabled()){
                            Toast.makeText(getActivity(), "Off", Toast.LENGTH_SHORT).show();
@@ -151,7 +151,7 @@ public class ConnectionFragment extends Fragment {
                            btnonOff.setText("Off Wifi");
                            Toast.makeText(getActivity(), "On", Toast.LENGTH_SHORT).show();
                        }
-                   } catch (Exception e){
+                   } catch (Exception e) {
                        Toast.makeText(getContext(),e.getLocalizedMessage(),Toast.LENGTH_LONG).show();
                    }
                }
